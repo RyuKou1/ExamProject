@@ -11,11 +11,11 @@ public class GameMaster {
         party.add(w);
         Thief t = new Thief("盗賊",70);
         party.add(t);
-        Matango m = new Matango();
+        Matango m = new Matango('A',45);
         monsters.add(m);
-        Goblin g = new Goblin();
+        Goblin g = new Goblin('A',50);
         monsters.add(g);
-        Slime s = new Slime();
+        Slime s = new Slime('A',40);
         monsters.add(s);
 
         System.out.println("---味方パーティ---");

@@ -1,8 +1,8 @@
-public class Monster implements Creature{
+public abstract class Monster implements Creature{
     private String name;
     private int hp;
     private char suffix;
-    public Monster(int hp, char suffix) {
+    public Monster(char suffix,int hp) {
         setSuffix(suffix);
         setHp(hp);
     }
