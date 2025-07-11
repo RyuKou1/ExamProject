@@ -3,12 +3,8 @@ public class Monster implements Creature{
     private int hp;
     private char suffix;
     public Monster(int hp, char suffix) {
-        this.suffix = suffix;
-        if(hp < 0){
-            throw new IllegalArgumentException("初期設定に誤りがあるため、キャラクターを作成できませんでした");
-        } else {
-            setHp(hp);
-        }
+        setSuffix(suffix);
+        setHp(hp);
     }
     final public boolean isAlive(){
         return this.hp > 0;
@@ -23,7 +19,11 @@ public class Monster implements Creature{
         return this.name;
     }
     public void setHp(int hp){
-        this.hp = hp;
+        if(hp < 0){
+            throw new IllegalArgumentException("初期設定に誤りがあるため、キャラクターを作成できませんでした");
+        } else {
+            this.hp = hp;
+        }
     }
     public int getHp(){
         return this.hp;

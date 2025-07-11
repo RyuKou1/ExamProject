@@ -1,6 +1,6 @@
 public class Thief extends Character{
-    public Thief(){
-        super();
+    public Thief(String name,int hp){
+        super(name,hp);
     }
     public void attack(Creature target){
         System.out.println("Thief attacked!");
