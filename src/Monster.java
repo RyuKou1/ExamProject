@@ -10,9 +10,12 @@ public abstract class Monster implements Creature{
     final public boolean isAlive(){
         return this.hp > 0;
     }
-    public void showStats() {
+
+    @Override
+    public void showStatus() {
         System.out.println(this.name + this.suffix +":HP" + this.hp);
     }
+
     public void setName(String name){
         this.name = name;
     }
