@@ -6,7 +6,7 @@ public class Hero extends Character{
     }
     public void attack(Creature target) {
         System.out.println(getName() + " attacks " + target.getName());
-        target.setHp(target.hp -= 10);
+        target.setHp(target.getHp() - 10);
     }
     public void setWeapon(String weapon){
         this.weapon = weapon;
