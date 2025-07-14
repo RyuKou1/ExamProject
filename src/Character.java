@@ -6,10 +6,11 @@ public abstract class Character implements Creature{
         setHp(hp);
     }
     final public boolean isAlive(){
+        showStatus();
         return this.hp >= 0;
     }
     public void showStatus(){
-        System.out.println(this.name + "HP " + this.hp);
+        System.out.println(this.name + " : HP " + this.hp);
     }
     public void setHp(int hp){
         if(hp < 0){

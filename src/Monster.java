@@ -8,12 +8,13 @@ public abstract class Monster implements Creature{
         setHp(hp);
     }
     final public boolean isAlive(){
+        showStatus();
         return this.hp > 0;
     }
 
     @Override
     public void showStatus() {
-        System.out.println(this.name + this.suffix +":HP" + this.hp);
+        System.out.println(this.name + this.suffix +" : HP " + this.hp);
     }
 
     public void setName(String name){
