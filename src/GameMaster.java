@@ -39,7 +39,6 @@ public class GameMaster {
         for(Monster j : monsters){
             for(Character i : party){
                 j.attack(i);
-                j.showStatus();
             }
         }
 
