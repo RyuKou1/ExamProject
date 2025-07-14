@@ -8,7 +8,7 @@ public class GameMaster {
 
         Hero h = new Hero("勇者",100,"剣");
         party.add(h);
-        Wizard w = new Wizard("魔法使い",60,50);
+        Wizard w = new Wizard("魔法使い",60,20);
         party.add(w);
         Thief t = new Thief("盗賊",70);
         party.add(t);
