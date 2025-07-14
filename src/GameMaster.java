@@ -32,13 +32,14 @@ public class GameMaster {
         for(Character i : party){
             for(Monster j : monsters){
                 i.attack(j);
+                j.showStatus();
             }
         }
 
         System.out.println("\n敵の総攻撃！");
-        for(Monster i : monsters){
-            for(Character j : party){
-                i.attack(j);
+        for(Monster j : monsters){
+            for(Character i : party){
+                j.attack(i);
             }
         }
         System.out.println("\nダメージを受けた勇者が突然光りだした！");
