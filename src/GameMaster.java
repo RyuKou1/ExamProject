@@ -28,7 +28,7 @@ public class GameMaster {
         g.showStatus();
         s.showStatus();
 
-        System.out.println("味方の総攻撃！");
+        System.out.println("\n味方の総攻撃！");
         for(Character i : party){
             for(Monster j : monsters){
                 i.attack(j);
@@ -48,7 +48,6 @@ public class GameMaster {
         party.set(0,superHero);
         for(Monster j : monsters){
             superHero.attack(j);
-            j.showStatus();
         }
 
         System.out.println("\n---味方パーティー最終ステータス---");
@@ -60,6 +59,7 @@ public class GameMaster {
             }
         }
 
+        System.out.println("\n---敵グループ最終ステータス---");
         for(Monster j : monsters){
             if(j.isAlive()){
                 System.out.println("生存状況 : 生存");
