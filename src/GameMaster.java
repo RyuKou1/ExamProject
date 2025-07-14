@@ -32,7 +32,6 @@ public class GameMaster {
         for(Character i : party){
             for(Monster j : monsters){
                 i.attack(j);
-                j.showStatus();
             }
         }
 
@@ -40,14 +39,17 @@ public class GameMaster {
         for(Monster j : monsters){
             for(Character i : party){
                 j.attack(i);
+                j.showStatus();
             }
         }
+
         System.out.println("\nダメージを受けた勇者が突然光りだした！");
         System.out.println("勇者はスーパーヒーローに進化した！");
         SuperHero superHero = new SuperHero(h);
         party.set(0,superHero);
         for(Monster j : monsters){
             superHero.attack(j);
+            j.showStatus();
         }
 
         System.out.println("\n---味方パーティー最終ステータス---");

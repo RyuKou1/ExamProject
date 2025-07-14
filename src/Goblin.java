@@ -5,6 +5,6 @@ public class Goblin extends Monster {
     @Override
     public void attack(Creature target) {
         System.out.println("ゴブリン" + getName() + "はナイフで切りつけた！"+target.getName()+"に8のダメージを与えた！");
-        target.setHp(target.getHp()-8);
+        target.setHp(Math.max(target.getHp() - 8, 0));
     }
 }

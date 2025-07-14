@@ -5,6 +5,6 @@ final public class Slime extends Monster{
     @Override
     public void attack(Creature target){
         System.out.println("スライム"+getName()+"は体当たり攻撃！"+ target.getName()+"に5のダメージを与えた！");
-        target.setHp(target.getHp()-5);
+        target.setHp(Math.max(target.getHp() - 5, 0));
     }
 }
