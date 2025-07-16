@@ -12,11 +12,11 @@ public class GameMaster {
         party.add(w);
         Thief t = new Thief("盗賊",70);
         party.add(t);
-        Matango m = new Matango("お化けキノコ",'A',45);
+        Matango m = new Matango('A',45);
         monsters.add(m);
-        Goblin g = new Goblin("ゴブリン",'A',50);
+        Goblin g = new Goblin('A',50);
         monsters.add(g);
-        Slime s = new Slime("スライム",'A',40);
+        Slime s = new Slime('A',40);
         monsters.add(s);
 
         System.out.println("---味方パーティ---");
@@ -52,6 +52,7 @@ public class GameMaster {
 
         System.out.println("\n---味方パーティー最終ステータス---");
         for(Character i : party){
+            i.showStatus();
             if(i.isAlive()){
                 System.out.println("生存状況 : 生存");
             } else {
@@ -61,6 +62,7 @@ public class GameMaster {
 
         System.out.println("\n---敵グループ最終ステータス---");
         for(Monster j : monsters){
+            j.showStatus();
             if(j.isAlive()){
                 System.out.println("生存状況 : 生存");
             } else {
