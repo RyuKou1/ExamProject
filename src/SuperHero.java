@@ -1,9 +1,6 @@
 public class SuperHero extends Hero {
     public SuperHero(Hero hero) {
         super(hero.getName(), hero.getHp(), hero.getWeapon());
-        setHp(hero.getHp());
-        setName(hero.getName());
-        setWeapon(hero.getWeapon());
     }
     @Override
     public void attack(Creature target) {

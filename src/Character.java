@@ -11,7 +11,7 @@ public abstract class Character implements Creature{
         }
     }
     final public boolean isAlive(){
-        return this.hp >= 0;
+        return this.hp > 0;
     }
     public void showStatus(){
         System.out.println(this.name + " : HP " + this.hp);
